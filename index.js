@@ -55,24 +55,21 @@ You shall not pass!`);
 
 // task #4
 
-let firstSide = prompt(`Enter length of first side`).split(` `).join('');
-let firstSideNumeric = parseFloat(firstSide);
+let firstSideNumeric = parseFloat(prompt(`Enter length of first side`).split(' ').join(''));
 
 while (firstSideNumeric <= 0 || isNaN(firstSideNumeric)) {
     alert('   Error, first side value must be a positive number');
     firstSideNumeric = parseFloat(prompt(`Enter length of first side`).split(' ').join(''));
 };
 
-let secondSide = prompt('Enter length of second side').split(` `).join('');
-let secondSideNumeric = parseFloat(secondSide);
+let secondSideNumeric = parseFloat(prompt(`Enter length of second side`).split(' ').join(''));
 
 while (secondSideNumeric <= 0 || isNaN(secondSideNumeric)) {
     alert('Error, second side value must be a positive number');
     secondSideNumeric = parseFloat(prompt(`Enter length of second side`).split(' ').join(''));
 };
 
-let thirdSide = prompt('Enter length of third side').split(` `).join('');
-let thirdSideNumeric = parseFloat(thirdSide);
+let thirdSideNumeric = parseFloat(prompt(`Enter length of third side`).split(' ').join(''));
 
 while (thirdSideNumeric <= 0 || isNaN(thirdSideNumeric)) {
     alert('Error, third side value must be a positive number');
