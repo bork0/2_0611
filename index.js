@@ -55,33 +55,36 @@ You shall not pass!`);
 
 // task #4
 
-let firstSide = parseFloat(prompt(`Enter length of first side`));
+let firstSide = prompt(`Enter length of first side`).split(` `).join('');
+let firstSideNumeric = parseFloat(firstSide);
 
-while (firstSide <= 0 || isNaN(firstSide)) {
+while (firstSideNumeric <= 0 || isNaN(firstSideNumeric)) {
     alert('   Error, first side value must be a positive number');
-    firstSide = parseFloat(prompt(`Enter length of first side`))
+    firstSideNumeric = parseFloat(prompt(`Enter length of first side`).split(' ').join(''));
 };
 
-let secondSide = parseFloat(prompt('Enter length of second side'));
+let secondSide = prompt('Enter length of second side').split(` `).join('');
+let secondSideNumeric = parseFloat(secondSide);
 
-while (secondSide <= 0 || isNaN(secondSide)) {
+while (secondSideNumeric <= 0 || isNaN(secondSideNumeric)) {
     alert('Error, second side value must be a positive number');
-    secondSide = parseFloat(prompt('Enter length of second side'))
+    secondSideNumeric = parseFloat(prompt(`Enter length of second side`).split(' ').join(''));
 };
 
-let thirdSide = parseFloat(prompt('Enter length of third side'));
+let thirdSide = prompt('Enter length of third side').split(` `).join('');
+let thirdSideNumeric = parseFloat(thirdSide);
 
-while (thirdSide <= 0 || isNaN(thirdSide)) {
+while (thirdSideNumeric <= 0 || isNaN(thirdSideNumeric)) {
     alert('Error, third side value must be a positive number');
-    thirdSide = parseFloat(prompt('Enter length of third side'))
+    thirdSideNumeric = parseFloat(prompt(`Enter length of third side`).split(' ').join(''));
 };
 
-let halfPerimeter = (firstSide + secondSide + thirdSide) / 2;
-let triangleArea = (halfPerimeter * (halfPerimeter - firstSide) * (halfPerimeter - secondSide) * (halfPerimeter - thirdSide)) ** (1 / 2);
+let halfPerimeter = (firstSideNumeric + secondSideNumeric + thirdSideNumeric) / 2;
+let triangleArea = (halfPerimeter * (halfPerimeter - firstSideNumeric) * (halfPerimeter - secondSideNumeric) * (halfPerimeter - thirdSideNumeric)) ** (1 / 2);
 
 triangleArea === 0 ? alert(`Such triangle cannot exist`) : alert(`The area of triangle is ` + triangleArea.toFixed(3) + `\u33A0`);
 
-if ((firstSide ** 2 === (secondSide ** 2) + (thirdSide ** 2)) || (secondSide ** 2 === (firstSide ** 2) + (thirdSide ** 2)) || (thirdSide ** 2 === (firstSide ** 2) + (secondSide ** 2))) {
+if ((firstSideNumeric ** 2 === (secondSideNumeric ** 2) + (thirdSideNumeric ** 2)) || (secondSideNumeric ** 2 === (firstSideNumeric ** 2) + (thirdSideNumeric ** 2)) || (thirdSideNumeric ** 2 === (firstSideNumeric ** 2) + (secondSideNumeric ** 2))) {
     alert(`This triangle is a right triangle`);
 } else {
     alert(`This triangle is not a right triangle`);
