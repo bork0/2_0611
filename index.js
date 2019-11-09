@@ -56,8 +56,25 @@ You shall not pass!`);
 // task #4
 
 let firstSide = parseFloat(prompt(`Enter length of first side`));
+
+while (firstSide <= 0 || isNaN(firstSide)) {
+    alert('   Error, first side value must be a positive number');
+    firstSide = parseFloat(prompt(`Enter length of first side`))
+};
+
 let secondSide = parseFloat(prompt('Enter length of second side'));
+
+while (secondSide <= 0 || isNaN(secondSide)) {
+    alert('Error, second side value must be a positive number');
+    secondSide = parseFloat(prompt('Enter length of second side'))
+};
+
 let thirdSide = parseFloat(prompt('Enter length of third side'));
+
+while (thirdSide <= 0 || isNaN(thirdSide)) {
+    alert('Error, third side value must be a positive number');
+    thirdSide = parseFloat(prompt('Enter length of third side'))
+};
 
 let halfPerimeter = (firstSide + secondSide + thirdSide) / 2;
 let triangleArea = (halfPerimeter * (halfPerimeter - firstSide) * (halfPerimeter - secondSide) * (halfPerimeter - thirdSide)) ** (1 / 2);
