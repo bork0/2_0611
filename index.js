@@ -82,7 +82,7 @@ while (thirdSideNumeric <= 0 || isNaN(thirdSideNumeric)) {
 let halfPerimeter = (firstSideNumeric + secondSideNumeric + thirdSideNumeric) / 2;
 let triangleArea = (halfPerimeter * (halfPerimeter - firstSideNumeric) * (halfPerimeter - secondSideNumeric) * (halfPerimeter - thirdSideNumeric)) ** (1 / 2);
 
-triangleArea === 0 ? alert(`Such triangle cannot exist`) : alert(`The area of triangle is ` + triangleArea.toFixed(3) + `\u33A0`);
+triangleArea === 0 || isNaN(triangleArea) ? alert(`Such triangle cannot exist`) : alert(`The area of triangle is ` + triangleArea.toFixed(3) + `\u33A0`);
 
 if ((firstSideNumeric ** 2 === (secondSideNumeric ** 2) + (thirdSideNumeric ** 2)) || (secondSideNumeric ** 2 === (firstSideNumeric ** 2) + (thirdSideNumeric ** 2)) || (thirdSideNumeric ** 2 === (firstSideNumeric ** 2) + (secondSideNumeric ** 2))) {
     alert(`This triangle is a right triangle`);
